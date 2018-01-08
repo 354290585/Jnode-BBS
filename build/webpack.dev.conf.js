@@ -1,7 +1,3 @@
-import {
-    isDate
-} from 'util';
-
 const path = require('path')
 const webpack = require('webpack')
 const webpackMerge = require('webpack-merge')
@@ -26,7 +22,7 @@ if (isDev) {
     config.entry = {
         app: [
             'react-hot-loader/patch',
-            path.join(__dirname, '../client/app.js')
+            path.join(__dirname, '../src/app.js')
         ]
     }
     config.devServer = {
