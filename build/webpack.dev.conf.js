@@ -26,20 +26,20 @@ if (isDev) {
         ]
     }
     config.devServer = {
-        host: '0.0.0.0',
+        host: '127.0.0.1',
         compress: true,
         port: '8080',
         contentBase: path.join(__dirname, '../dist'),
-        hot: true,
+        // hot: true,
         open: true,
         overlay: {
             errors: true
         },
         publicPath: '/public/',
         historyApiFallback: {
-            index: '/public/index.html'
+          index: '/public/index.html'
         },
     }
-    config.plugins.push(new webpack.HotModuleReplacementPlugin())
+    // config.plugins.push(new webpack.HotModuleReplacementPlugin())
 }
 module.exports = config
